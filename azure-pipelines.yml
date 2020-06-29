@@ -3,10 +3,10 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'vs2017-win2016'
 
 steps:
 - task: katalonTask@0
   inputs:
     version: '7.5.10'
-    executeArgs: 'katalonc -noSplash -projectPath="C:\Users\902372\git\azure-devops-extension-samples\test.prj"-retry=0 -executionProfile="default" -browserType="Chrome"'
+    executeArgs: '-retry=0 -testSuitePath="Test Suites/TS_RegressionTest" -executionProfile="default" -browserType="Chrome"  -apiKey="b5fe0f55-2132-48bd-a634-846522141dfe"'
